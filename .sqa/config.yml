@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/dianagudu/motley_cue:
       branch: master
@@ -15,48 +15,52 @@ sqa_criteria:
     repos:
       github.com/dianagudu/motley_cue git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-violet-rhinoceros.sh
-        container: qc.acc_gloppy-ultramarine-hyena
+        - /usr/bin/env sh .sqa/script.breezy-xanthic-raccoon.sh
+        container: qc.acc_surly-orchid-falcon
   QC.Doc:
     repos:
       github.com/dianagudu/motley_cue find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-platinum-deer.sh
-        container: qc.doc_lanky-maroon-coyote
+        - /usr/bin/env sh .sqa/script.beady-ecru-otter.sh
+        container: qc.doc_gummy-ruby-camel
       github.com/dianagudu/motley_cue git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-wheat-lizard.sh
-        container: qc.doc_boozy-silver-snail
+        - /usr/bin/env sh .sqa/script.breezy-malachite-slug.sh
+        container: qc.doc_whiny-linen-anteater
       github.com/dianagudu/motley_cue markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-burgundy-wildebeest.sh
-        container: qc.doc_paltry-persimmon-slug
+        - /usr/bin/env sh .sqa/script.messy-olivine-maltese.sh
+        container: qc.doc_wimpy-aqua-nightingale
       github.com/dianagudu/motley_cue restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-gold-jackal.sh
-        container: qc.doc_craggy-lemon-blue
+        - /usr/bin/env sh .sqa/script.wheezy-buff-lobster.sh
+        container: qc.doc_wiggy-cerulean-kangaroo
   QC.Lic:
     repos:
       github.com/dianagudu/motley_cue licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-celadon-peccary.sh
-        container: qc.lic_boozy-amethyst-frog
+        - /usr/bin/env sh .sqa/script.stinky-maroon-bee.sh
+        container: qc.lic_boozy-vermilion-cuscus
   QC.Sec:
     repos:
       github.com/dianagudu/motley_cue bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-purple-cockroach.sh
-        container: qc.sec_sleepy-ruby-spider
+        - /usr/bin/env sh .sqa/script.hazy-xanthic-tapir.sh
+        container: qc.sec_fuzzy-harlequin-macaw
   QC.Sty:
     repos:
       github.com/dianagudu/motley_cue flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-sangria-anteater.sh
-        container: qc.sty_ugly-periwinkle-foxhound
+        - /usr/bin/env sh .sqa/script.woozy-myrtle-heron.sh
+        container: qc.sty_bumpy-teal-llama
+      github.com/dianagudu/motley_cue rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-magenta-hyena.sh
+        container: qc.sty_tasty-russet-gerbil
   QC.Ver:
     repos:
       github.com/dianagudu/motley_cue get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-bronze-pinscher.sh
-        container: qc.ver_fuzzy-purple-binturong
+        - /usr/bin/env sh .sqa/script.sloppy-sangria-paradise.sh
+        container: qc.ver_baggy-chestnut-shrimp
 timeout: 1800
